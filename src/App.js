@@ -1,6 +1,7 @@
 import AnimalShow from "./AnimalShow";
 import "./App.css";
 import { useState } from "react";
+import Navbar from "./Navbar";
 
 function getRandomAnimal() {
   const animals = [
@@ -14,6 +15,8 @@ function getRandomAnimal() {
     "fox",
     "lion",
     "tiger",
+    "dolphin",
+    "chameleon",
   ];
 
   return animals[Math.floor(Math.random() * animals.length)];
@@ -32,6 +35,7 @@ function App() {
 
   return (
     <div className="app">
+    <Navbar/>
       <button onClick={handleClick}>Add Animal</button>
       <div className="animal-list">{renderedAnimals}</div>
     </div>
